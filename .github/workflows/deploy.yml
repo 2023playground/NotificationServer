@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  ACR_REGISTRY: 356284659.azurecr.io
+  ACR_REGISTRY: 6246965351.azurecr.io
 
 permissions:
   contents: read
