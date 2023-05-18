@@ -18,7 +18,7 @@ func SendEmailResolver(to, subject, body string) error {
 		from := mail.NewEmail("ticketWatcher", "playgroundevelope@gmail.com")
 		subject := subject
 		to := mail.NewEmail("User", to)
-		htmlContent := "<div>Hello Amigo</div>"
+		htmlContent := fmt.Sprintf("<div>%s</div>", body)
 		message := mail.NewSingleEmail(from, subject, to, body, htmlContent)
 		client := sendgrid.NewSendClient(os.Getenv("SENDGRID_API_KEY"))
 		response, err := client.Send(message)
